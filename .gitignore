@@ -28,5 +28,6 @@ export/
 .wakatime-project
 
 # Editor ignores
+addons/
 nocommit/
 .vscode/
