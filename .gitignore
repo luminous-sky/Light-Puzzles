@@ -20,6 +20,13 @@ data_*/
 mono_crash.*.json
 
 # Export outputs
+export/
 *.exe
-# Uncomment if your project does not version PCK files as runtime dependencies.
-# *.pck
+*.pck
+
+# Hackatime ignores
+.wakatime-project
+
+# Editor ignores
+nocommit/
+.vscode/
