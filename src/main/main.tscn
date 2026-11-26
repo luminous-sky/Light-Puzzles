@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://uvkhx2fvwgk2" path="res://player/player.tscn" id="1_53q0u"]
 [ext_resource type="Texture2D" uid="uid://g5htibrxi441" path="res://assets/tile.png" id="1_xwkvk"]
 [ext_resource type="Texture2D" uid="uid://vjmtchv50l7k" path="res://icon.svg" id="2_pjrb6"]
+[ext_resource type="PackedScene" uid="uid://c61dqmjejmjks" path="res://laser/laser_pointer.tscn" id="4_c651c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c651c"]
 texture = ExtResource("1_xwkvk")
@@ -10,6 +11,9 @@ texture = ExtResource("1_xwkvk")
 
 [sub_resource type="TileSet" id="TileSet_qwe4u"]
 sources/0 = SubResource("TileSetAtlasSource_c651c")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c651c"]
+size = Vector2(32, 32)
 
 [node name="Main" type="Node2D" unique_id=1650180587]
 
@@ -20,6 +24,18 @@ tile_set = SubResource("TileSet_qwe4u")
 [node name="Player" parent="." unique_id=733170964 instance=ExtResource("1_53q0u")]
 position = Vector2(42, -40)
 
-[node name="Placeholder" type="Sprite2D" parent="." unique_id=10373300]
-position = Vector2(172, -67)
+[node name="LaserPointer" parent="." unique_id=829949379 instance=ExtResource("4_c651c")]
+position = Vector2(186, -210)
+
+[node name="LaserPointer2" parent="." unique_id=1062425178 instance=ExtResource("4_c651c")]
+position = Vector2(186, -162)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=149755564]
+position = Vector2(306, -160)
+
+[node name="Placeholder" type="Sprite2D" parent="StaticBody2D" unique_id=10373300]
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_pjrb6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2078830463]
+shape = SubResource("RectangleShape2D_c651c")

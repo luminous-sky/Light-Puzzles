@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c61dqmjejmjks"]
+
+[ext_resource type="Texture2D" uid="uid://ckqulie4bhgpm" path="res://assets/red_laser.png" id="1_dvkcg"]
+[ext_resource type="Script" uid="uid://xwupwhmn0lqn" path="res://laser/laser_pointer.gd" id="1_kvh7j"]
+[ext_resource type="Texture2D" uid="uid://drlhpusln6tig" path="res://assets/laser_pointer.png" id="2_lougl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_moqhw"]
+size = Vector2(12, 12)
+
+[node name="LaserPointer" type="RigidBody2D" unique_id=829949379]
+script = ExtResource("1_kvh7j")
+
+[node name="Block" type="Sprite2D" parent="." unique_id=640487330]
+texture = ExtResource("2_lougl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1301223146]
+shape = SubResource("RectangleShape2D_moqhw")
+
+[node name="Laser" type="Sprite2D" parent="." unique_id=1856397248]
+texture_repeat = 2
+position = Vector2(8, 0)
+texture = ExtResource("1_dvkcg")
+centered = false
+offset = Vector2(0, -8)
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="RayCast" type="RayCast2D" parent="." unique_id=1339955392]
+position = Vector2(8, 0)
+target_position = Vector2(16, 0)
