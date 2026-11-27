@@ -29,6 +29,7 @@ position = Vector2(186, -210)
 
 [node name="LaserPointer2" parent="." unique_id=1062425178 instance=ExtResource("4_c651c")]
 position = Vector2(186, -162)
+color = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=149755564]
 position = Vector2(306, -160)
