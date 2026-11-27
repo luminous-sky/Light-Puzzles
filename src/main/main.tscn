@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://vjmtchv50l7k" path="res://icon.svg" id="2_pjrb6"]
 [ext_resource type="PackedScene" uid="uid://c61dqmjejmjks" path="res://laser/laser_pointer.tscn" id="4_c651c"]
 [ext_resource type="PackedScene" uid="uid://cwhagnkmmim12" path="res://gates/add_gate.tscn" id="5_3wy1v"]
+[ext_resource type="PackedScene" uid="uid://clr3mdwjbe17g" path="res://gates/subtract_gate.tscn" id="6_kfbq2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c651c"]
 texture = ExtResource("1_xwkvk")
@@ -32,9 +33,18 @@ position = Vector2(186, -210)
 position = Vector2(186, -162)
 color = 1
 
+[node name="LaserPointer5" parent="." unique_id=1045746994 instance=ExtResource("4_c651c")]
+position = Vector2(186, -114)
+color = 4
+
 [node name="LaserPointer3" parent="." unique_id=18811736 instance=ExtResource("4_c651c")]
 position = Vector2(395, -309)
 rotation = 1.5707964
+color = 1
+
+[node name="LaserPointer4" parent="." unique_id=962478077 instance=ExtResource("4_c651c")]
+position = Vector2(395, -13)
+rotation = -1.5707964
 color = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=149755564]
@@ -49,3 +59,6 @@ shape = SubResource("RectangleShape2D_c651c")
 
 [node name="AddGate" parent="." unique_id=278080663 instance=ExtResource("5_3wy1v")]
 position = Vector2(395, -210)
+
+[node name="SubtractGate" parent="." unique_id=1799219511 instance=ExtResource("6_kfbq2")]
+position = Vector2(395, -114)

@@ -7,6 +7,8 @@ var lasers: Array[LaserPointer]
 
 func _ready() -> void:
 	enabled = false
+	
+	super._ready()
 
 
 func add_laser(laser: LaserPointer) -> void:

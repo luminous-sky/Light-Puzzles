@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://clr3mdwjbe17g"]
+
+[ext_resource type="Script" uid="uid://djcubgp4cyfob" path="res://gates/subtract_gate.gd" id="1_q0aes"]
+[ext_resource type="Texture2D" uid="uid://crvgbdwedva7l" path="res://assets/color_sub.png" id="2_q0aes"]
+[ext_resource type="PackedScene" uid="uid://c452n4sularn0" path="res://laser/laser_color.tscn" id="3_g6s3m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h0och"]
+size = Vector2(12, 12)
+
+[node name="SubtractGate" type="RigidBody2D" unique_id=278080663]
+contact_monitor = true
+max_contacts_reported = 8
+script = ExtResource("1_q0aes")
+metadata/_custom_type_script = "uid://xwupwhmn0lqn"
+
+[node name="Block" type="Sprite2D" parent="." unique_id=110020789]
+texture = ExtResource("2_q0aes")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=464489865]
+shape = SubResource("RectangleShape2D_h0och")
+
+[node name="LaserColor" parent="." unique_id=736237227 instance=ExtResource("3_g6s3m")]
+position = Vector2(8, 0)
+
+[node name="RayCast" type="RayCast2D" parent="." unique_id=1699795141]
+position = Vector2(8, 0)
+target_position = Vector2(16, 0)
