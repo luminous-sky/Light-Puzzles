@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody2D
 
 
@@ -12,4 +13,12 @@ func _physics_process(_delta: float) -> void:
 	else:
 		velocity = velocity.lerp(Vector2.ZERO, SLOW_RATIO)
 	
-	move_and_slide()
+	var collided = move_and_slide()
+	
+	if collided:
+		var col: Object = get_last_slide_collision().get_collider()
+		if col is not PhysicsObject:
+			return
+		
+		var object: PhysicsObject = col as PhysicsObject
+		object.push(velocity)

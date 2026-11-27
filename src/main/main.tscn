@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c61dqmjejmjks" path="res://laser/laser_pointer.tscn" id="4_c651c"]
 [ext_resource type="PackedScene" uid="uid://cwhagnkmmim12" path="res://gates/add_gate.tscn" id="5_3wy1v"]
 [ext_resource type="PackedScene" uid="uid://clr3mdwjbe17g" path="res://gates/subtract_gate.tscn" id="6_kfbq2"]
+[ext_resource type="PackedScene" uid="uid://duyb41uue2v4v" path="res://objects/box.tscn" id="8_67ri8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c651c"]
 texture = ExtResource("1_xwkvk")
@@ -62,3 +63,6 @@ position = Vector2(395, -210)
 
 [node name="SubtractGate" parent="." unique_id=1799219511 instance=ExtResource("6_kfbq2")]
 position = Vector2(395, -114)
+
+[node name="Box" parent="." unique_id=1407811611 instance=ExtResource("8_67ri8")]
+position = Vector2(62, -99)
