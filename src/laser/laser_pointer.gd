@@ -18,7 +18,7 @@ var current_gate: Gate = null
 
 
 func _ready() -> void:
-	var raycast_target: Vector2 = max_length * global_transform.x
+	var raycast_target: Vector2 = max_length * $RayCast.target_position.normalized()
 	$RayCast.target_position = raycast_target
 	
 	$LaserColor.color = color
