@@ -17,11 +17,11 @@ func add_laser(laser: LaserPointer) -> void:
 	
 	lasers.append(laser)
 	
+	enabled = true
+	
 	color = get_output()
 	$LaserColor.color = color
 	$LaserColor.update_color()
-	
-	enabled = true
 
 
 func remove_laser(laser: LaserPointer) -> void:
@@ -31,12 +31,12 @@ func remove_laser(laser: LaserPointer) -> void:
 	
 	lasers.remove_at(pos)
 	
+	if len(lasers) == 0:
+		enabled = false
+	
 	color = get_output()
 	$LaserColor.color = color
 	$LaserColor.update_color()
-	
-	if len(lasers) == 0:
-		enabled = false
 
 
 @abstract func get_output() -> LaserColor.LASER_COLOR

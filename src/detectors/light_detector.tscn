@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://ckpu047yggpet"]
+
+[ext_resource type="Script" uid="uid://8fcdaqjsscev" path="res://detectors/light_detector.gd" id="1_xgrc6"]
+[ext_resource type="Texture2D" uid="uid://bf2e63i207dhh" path="res://assets/light_detector.png" id="2_xgrc6"]
+[ext_resource type="PackedScene" uid="uid://c452n4sularn0" path="res://laser/laser_color.tscn" id="3_odkbg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h0och"]
+size = Vector2(12, 12)
+
+[node name="LightDetector" type="RigidBody2D" unique_id=278080663]
+contact_monitor = true
+max_contacts_reported = 8
+script = ExtResource("1_xgrc6")
+metadata/_custom_type_script = "uid://xwupwhmn0lqn"
+
+[node name="Block" type="Sprite2D" parent="." unique_id=110020789]
+texture = ExtResource("2_xgrc6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=464489865]
+shape = SubResource("RectangleShape2D_h0och")
+
+[node name="LaserColor" parent="." unique_id=736237227 instance=ExtResource("3_odkbg")]
+position = Vector2(8, 0)
+
+[node name="RayCast" type="RayCast2D" parent="." unique_id=1699795141]
+position = Vector2(8, 0)
+target_position = Vector2(16, 0)
