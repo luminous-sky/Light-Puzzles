@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cwhagnkmmim12" path="res://gates/add_gate.tscn" id="5_3wy1v"]
 [ext_resource type="PackedScene" uid="uid://clr3mdwjbe17g" path="res://gates/subtract_gate.tscn" id="6_kfbq2"]
 [ext_resource type="PackedScene" uid="uid://duyb41uue2v4v" path="res://objects/box.tscn" id="8_67ri8"]
+[ext_resource type="PackedScene" uid="uid://cg2t7kagpoyf7" path="res://objects/reflector.tscn" id="9_0i4oc"]
 [ext_resource type="PackedScene" uid="uid://ckpu047yggpet" path="res://detectors/light_detector.tscn" id="9_grrlh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c651c"]
@@ -53,6 +54,12 @@ color = 1
 position = Vector2(186, -52)
 color = 4
 
+[node name="LaserPointer7" parent="." unique_id=1434213511 instance=ExtResource("4_c651c")]
+position = Vector2(136, -104)
+rotation = 2.024538
+max_length = 256.0
+color = 4
+
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=149755564]
 position = Vector2(306, -160)
 
@@ -75,3 +82,10 @@ position = Vector2(62, -99)
 [node name="LightDetector" parent="." unique_id=37932119 instance=ExtResource("9_grrlh")]
 position = Vector2(273, -52)
 expected_color = 1
+
+[node name="Reflector" parent="." unique_id=271614537 instance=ExtResource("9_0i4oc")]
+position = Vector2(108, -34)
+
+[node name="Reflector2" parent="." unique_id=515950385 instance=ExtResource("9_0i4oc")]
+position = Vector2(86, -82)
+rotation = -3.1415927

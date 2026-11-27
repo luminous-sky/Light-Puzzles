@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cg2t7kagpoyf7"]
+
+[ext_resource type="Script" uid="uid://jsevskoss5vb" path="res://objects/reflector.gd" id="1_ifd86"]
+[ext_resource type="Texture2D" uid="uid://cjyl5iv0fwcu5" path="res://assets/reflector.png" id="2_7kfqs"]
+[ext_resource type="Script" uid="uid://xwupwhmn0lqn" path="res://laser/laser_pointer.gd" id="3_7kfqs"]
+[ext_resource type="PackedScene" uid="uid://c452n4sularn0" path="res://laser/laser_color.tscn" id="3_7rxh1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_agid5"]
+size = Vector2(14, 6)
+
+[node name="Reflector" type="RigidBody2D" unique_id=271614537]
+script = ExtResource("1_ifd86")
+metadata/_custom_type_script = "uid://xwupwhmn0lqn"
+
+[node name="Block" type="Sprite2D" parent="." unique_id=870472454]
+texture = ExtResource("2_7kfqs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=919120322]
+shape = SubResource("RectangleShape2D_agid5")
+
+[node name="Reflection" type="RigidBody2D" parent="." unique_id=1876686539]
+visible = false
+position = Vector2(0, -3)
+script = ExtResource("3_7kfqs")
+metadata/_custom_type_script = "uid://xwupwhmn0lqn"
+
+[node name="LaserColor" parent="Reflection" unique_id=736237227 instance=ExtResource("3_7rxh1")]
+rotation = -1.5707964
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="RayCast" type="RayCast2D" parent="Reflection" unique_id=207931447]
+scale = Vector2(0.99999994, 0.99999994)
+target_position = Vector2(0, -16)
