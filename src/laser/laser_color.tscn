@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c452n4sularn0"]
 
 [ext_resource type="Script" uid="uid://crwoiumyv6by3" path="res://laser/laser_color.gd" id="1_a3nf0"]
-[ext_resource type="Texture2D" uid="uid://ckqulie4bhgpm" path="res://assets/red_laser.png" id="1_hyv65"]
+[ext_resource type="Texture2D" uid="uid://ckqulie4bhgpm" path="res://assets/lasers/red_laser.png" id="1_hyv65"]
 
 [node name="LaserColor" type="Sprite2D" unique_id=736237227]
 texture_repeat = 2

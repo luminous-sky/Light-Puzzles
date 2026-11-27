@@ -6,11 +6,23 @@ extends Sprite2D
 enum LASER_COLOR {
 	NONE = ColorModel.RGB.NONE,
 	RED = ColorModel.RGB.RED,
+	GREEN = ColorModel.RGB.GREEN,
+	BLUE = ColorModel.RGB.BLUE,
+	YELLOW = ColorModel.RGB.YELLOW,
+	MAGENTA = ColorModel.RGB.MAGENTA,
+	CYAN = ColorModel.RGB.CYAN,
+	WHITE = ColorModel.RGB.WHITE,
 }
 
 static var sprites: Dictionary[LASER_COLOR, CompressedTexture2D] = {
 	LASER_COLOR.NONE: preload("uid://cdha162jvnxn3"),
 	LASER_COLOR.RED: preload("uid://ckqulie4bhgpm"),
+	LASER_COLOR.GREEN: preload("uid://dpgkrjm52qy5p"),
+	LASER_COLOR.BLUE: preload("uid://deva2742wcn48"),
+	LASER_COLOR.YELLOW: preload("uid://61mmrl58frd8"),
+	LASER_COLOR.MAGENTA: preload("uid://bnqvggi85yqpt"),
+	LASER_COLOR.CYAN: preload("uid://bm7w7svhg7ljv"),
+	LASER_COLOR.WHITE: preload("uid://qwr10jrh8xco"),
 }
 
 
@@ -20,11 +32,6 @@ static var sprites: Dictionary[LASER_COLOR, CompressedTexture2D] = {
 
 func _ready() -> void:
 	update_color()
-	
-	# Color addition test
-	print(add_colors(LASER_COLOR.NONE, LASER_COLOR.NONE), " vs. ", LASER_COLOR.NONE)
-	print(add_colors(LASER_COLOR.NONE, LASER_COLOR.RED), " vs. ", LASER_COLOR.RED)
-	print(add_colors(LASER_COLOR.RED, LASER_COLOR.RED), " vs. ", LASER_COLOR.RED)
 
 
 ## Changes the laser's length to the specified length.
