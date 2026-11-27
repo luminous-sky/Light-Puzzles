@@ -5,7 +5,7 @@ const SPEED: float = 100.0
 const SLOW_RATIO: float = 0.6
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var direction: Vector2 = Input.get_vector("left", "right", "up", "down")
 	if direction:
 		velocity = direction.normalized() * SPEED

@@ -16,4 +16,4 @@ enum RGB {
 
 ## Adds two RGB colors together
 static func add_rgb(c1: RGB, c2: RGB) -> RGB:
-	return c1 | c2
+	return (c1 | c2) as RGB

@@ -25,7 +25,7 @@ func _ready() -> void:
 	$LaserColor.update_color()
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	_update_length()
 
 
