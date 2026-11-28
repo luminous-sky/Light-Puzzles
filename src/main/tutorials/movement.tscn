@@ -1,11 +1,11 @@
 [gd_scene format=4 uid="uid://ccwe3ywd7pphv"]
 
-[ext_resource type="Texture2D" uid="uid://g5htibrxi441" path="res://assets/tile.png" id="1_s15op"]
-[ext_resource type="PackedScene" uid="uid://uvkhx2fvwgk2" path="res://player/player.tscn" id="2_ewt6w"]
-[ext_resource type="PackedScene" uid="uid://b3achccs6vypi" path="res://exits/base_exit.tscn" id="4_i5nuf"]
+[ext_resource type="Texture2D" uid="uid://g5htibrxi441" path="res://assets/tile.png" id="1_dxxjv"]
+[ext_resource type="PackedScene" uid="uid://uvkhx2fvwgk2" path="res://player/player.tscn" id="2_pi31v"]
+[ext_resource type="PackedScene" uid="uid://b3achccs6vypi" path="res://exits/base_exit.tscn" id="3_n5r7b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c651c"]
-texture = ExtResource("1_s15op")
+texture = ExtResource("1_dxxjv")
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_qwe4u"]
@@ -38,10 +38,10 @@ position = Vector2(656, 0)
 rotation = -7.853982
 shape = SubResource("WorldBoundaryShape2D_moqhw")
 
-[node name="Player" parent="." unique_id=733170964 instance=ExtResource("2_ewt6w")]
+[node name="Player" parent="." unique_id=733170964 instance=ExtResource("2_pi31v")]
 position = Vector2(77, -210)
 
-[node name="BaseExit" parent="." unique_id=611996678 instance=ExtResource("4_i5nuf")]
+[node name="BaseExit" parent="." unique_id=611996678 instance=ExtResource("3_n5r7b")]
 position = Vector2(487, -208)
 start_disabled = false
-next_scene = "uid://cy6hjf6ho1aha"
+next_scene = "uid://doava3e1223mb"

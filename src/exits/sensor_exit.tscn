@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b4di2dhj7i3b5"]
+
+[ext_resource type="Script" uid="uid://cs2ww0wp4f8y0" path="res://exits/sensor_exit.gd" id="1_sf4rs"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ob5m5"]
+load_path = "res://.godot/imported/exit.png-851c039c90041d896886fb5ebf4f1311.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_moqhw"]
+size = Vector2(16, 16)
+
+[node name="SensorExit" type="Area2D" unique_id=611996678]
+script = ExtResource("1_sf4rs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1948351836]
+texture = SubResource("CompressedTexture2D_ob5m5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1417371635]
+shape = SubResource("RectangleShape2D_moqhw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
