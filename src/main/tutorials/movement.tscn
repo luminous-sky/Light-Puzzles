@@ -44,4 +44,4 @@ position = Vector2(77, -210)
 [node name="BaseExit" parent="." unique_id=611996678 instance=ExtResource("3_n5r7b")]
 position = Vector2(487, -208)
 start_disabled = false
-next_scene = "uid://doava3e1223mb"
+next_scene = "uid://re0q5jlsbwwq"

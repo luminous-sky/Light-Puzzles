@@ -65,4 +65,4 @@ color = 1
 [node name="SensorExit" parent="." unique_id=611996678 node_paths=PackedStringArray("detector") instance=ExtResource("6_k78an")]
 position = Vector2(537, -206)
 detector = NodePath("../LightDetector2")
-next_scene = "uid://cy6hjf6ho1aha"
+next_scene = "uid://br67iir5a2hde"
