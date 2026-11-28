@@ -53,6 +53,7 @@ func remove_laser(laser: LaserPointer) -> void:
 		return
 	
 	var data: LaserPointer = lasers[laser]
-	data.queue_free()
+	data.enabled = false
 	
+	data.queue_free()
 	lasers.erase(laser)

@@ -46,6 +46,15 @@ func update_raycast_length(new_len: float) -> void:
 func _update_length() -> float:
 	if not enabled:
 		$LaserColor.set_length(0.0)
+		
+		if current_gate:
+			current_gate.remove_laser(self)
+			current_gate = null
+		
+		if current_reflector:
+			current_reflector.remove_laser(self)
+			current_reflector = null
+		
 		return 0.0
 	
 	var length: float = 0.0
